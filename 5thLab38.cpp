@@ -35,19 +35,6 @@ Markup sMarkup = { (char*)"Arial", 64, 1, 0, 0.0, 0.0,
 class Main : public ICallbacks
 {
 public:
-    const std::string CONTENT_PATH = "F:/Content/";
-    const std::string QUAD_OBJ = CONTENT_PATH + "quad.obj";
-    const std::string BILLBOARD_MODEL = CONTENT_PATH + "monster_hellknight.png";
-    const std::string BOX_OBJ = CONTENT_PATH + "box.obj";
-    const std::string TEXTURE = CONTENT_PATH + "grass.jpg";
-    const std::string NORMAL_MAP = CONTENT_PATH + "normal_map.jpg";
-    const std::string NORMAL_UP = CONTENT_PATH + "normal_up.jpg";
-    const std::string PHOENIX = CONTENT_PATH + "phoenix_ugv.md2";
-    const std::string JEEP = CONTENT_PATH + "jeep.obj";
-    const std::string HHELI = CONTENT_PATH + "hheli.obj";
-    const std::string SPIDER = CONTENT_PATH + "spider.obj";
-    const std::string SPHERE_OBJ = CONTENT_PATH + "sphere.obj";
-    
 
     Main() 
     {
@@ -99,7 +86,7 @@ public:
         m_pEffect->SetMatSpecularIntensity(0.0f);
         m_pEffect->SetMatSpecularPower(0);
 
-        if (!m_mesh.LoadMesh(CONTENT_PATH + "boblampclean.md5mesh")) {
+        if (!m_mesh.LoadMesh("F:/Content/boblampclean.md5mesh")) {
             printf("Mesh load failed\n");
             return false;            
         }
